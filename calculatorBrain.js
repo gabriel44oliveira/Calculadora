@@ -9,27 +9,52 @@ function onNumberClicked(numberButton){
     }
 }
 
+var number1
+var number2
+var operacao
+
 function onClearClicked(){
     result.innerHTML = "0";
 }
 
-function onDivideClicked(){
-    result.innerHTML = result.innerHTML + "/"
-}
-
 function onAddClicked(){
-    result.innerHTML = result.innerHTML + "+"
+    number1 = Number(result.innerHTML)
+    operacao = 1
+    onClearClicked()
+}
+function onSubtractClicked(){
+    number1 = Number(result.innerHTML)
+    operacao = 2
+    onClearClicked()
 }
 
-function onSubtractClicked(){
-    result.innerHTML = result.innerHTML + "-"
+function onDivideClicked(){
+    number1 = Number(result.innerHTML)
+    operacao = 3
+    onClearClicked()
 }
 
 function onMultiplyCliked(){
-    result.innerHTML = result.innerHTML + "*"
+    number1 = Number(result.innerHTML)
+    operacao = 4
+    onClearClicked()
 }
 
 function onEqualsClicked(){
-    result = 
-    result.innerHTML = "="
-}
+    if (operacao == 1){
+        number2 = Number(result.innerHTML)
+        result.innerHTML = number1+number2
+    }
+    if (operacao == 2){
+        number2 = Number(result.innerHTML)
+        result.innerHTML = number1-number2
+    }
+    if (operacao == 3){
+        number2 = Number(result.innerHTML)
+        result.innerHTML = number1/number2
+    }
+    if (operacao == 4){
+        number2 = Number(result.innerHTML)
+        result.innerHTML = number1*number2
+    }
+} 
