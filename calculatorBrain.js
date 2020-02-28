@@ -1,4 +1,8 @@
 var result = document.getElementById("result");
+var number1
+var number2
+var operacao
+
 function onNumberClicked(numberButton){
     
     if(result.innerHTML == "0"){
@@ -8,11 +12,6 @@ function onNumberClicked(numberButton){
         result.innerHTML += numberButton.innerHTML;
     }
 }
-
-var number1
-var number2
-var operacao
-
 function onClearClicked(){
     result.innerHTML = "0";
 }
@@ -51,7 +50,11 @@ function onEqualsClicked(){
     }
     if (operacao == 3){
         number2 = Number(result.innerHTML)
-        result.innerHTML = number1/number2
+        if (number2 == 0){
+            result.innerHTML = "Não é possível dividir por 0"
+        } else {
+            result.innerHTML = number1/number2
+        }
     }
     if (operacao == 4){
         number2 = Number(result.innerHTML)
