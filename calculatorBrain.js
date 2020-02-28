@@ -14,9 +14,6 @@ function onNumberClicked(numberButton){
 }
 function onClearClicked(){
     result.innerHTML = "0";
-    number2 ="0"
-    number1 = "0"
-    operacao = "0"
 }
 
 function onAddClicked(){
