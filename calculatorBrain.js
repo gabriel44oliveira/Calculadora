@@ -1,5 +1,4 @@
 var result = document.getElementById("result");
-
 function onNumberClicked(numberButton){
     
     if(result.innerHTML == "0"){
@@ -14,25 +13,23 @@ function onClearClicked(){
     result.innerHTML = "0";
 }
 
-function onEqualsClicked(){
-    //TODO implement this function
-}
-
 function onDivideClicked(){
-    //TODO implement this function
+    result.innerHTML = result.innerHTML + "/"
 }
-
-
 
 function onAddClicked(){
-    //TODO implement this function
+    result.innerHTML = result.innerHTML + "+"
 }
 
 function onSubtractClicked(){
-    //TODO implement this function
+    result.innerHTML = result.innerHTML + "-"
 }
 
 function onMultiplyCliked(){
-    //TODO implement this function
+    result.innerHTML = result.innerHTML + "*"
 }
 
+function onEqualsClicked(){
+    result = 
+    result.innerHTML = "="
+}
